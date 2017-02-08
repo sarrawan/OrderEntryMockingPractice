@@ -3,7 +3,7 @@
 namespace OrderEntryMockingPractice.Models
 {
     public class Order
-    {
+    { 
         public Order()
         {
             this.OrderItems = new List<OrderItem>();

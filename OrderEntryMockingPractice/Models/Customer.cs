@@ -1,7 +1,19 @@
-﻿namespace OrderEntryMockingPractice.Models
+﻿using OrderEntryMockingPractice.Services;
+
+namespace OrderEntryMockingPractice.Models
 {
     public class Customer
     {
+
+        public ICustomerRepository _ICustomerRepository;
+
+        public Customer(ICustomerRepository customerRepos)
+        {
+            _ICustomerRepository = customerRepos;
+        }
+
+        public Customer() { }
+
         public int? CustomerId { get; set; }
         public string CustomerName { get; set; }
 
